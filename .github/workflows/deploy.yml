@@ -14,6 +14,8 @@ jobs:
       uses: actions/setup-node@v1
     - run: yarn install
     - run: yarn build
+      env:
+        PUBLIC_URL: https://kotet.jp/custom-style-bookmarklet-generator/
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
